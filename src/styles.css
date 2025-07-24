@@ -373,7 +373,7 @@ nav.scrolled {
     background: white;
     margin-bottom: 0.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .task-checkbox {
@@ -445,7 +445,7 @@ nav.scrolled {
     background: white;
     border-radius: 8px;
     padding: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .detail-item {
@@ -491,7 +491,7 @@ nav.scrolled {
     padding: 0.5rem;
     border-radius: 8px;
     margin-bottom: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .expense-icon {
@@ -536,7 +536,7 @@ nav.scrolled {
     padding: 0.75rem;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .stat-number {
@@ -555,7 +555,7 @@ nav.scrolled {
     background: white;
     padding: 0.75rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .workout-title {
@@ -581,7 +581,7 @@ nav.scrolled {
     padding: 1rem;
     text-align: center;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-image {
@@ -1107,6 +1107,127 @@ nav.scrolled {
     color: #64ffda;
 }
 
+
+/* Add these styles to your existing styles.css */
+
+/* Modal Body Layout */
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.modal-frame {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-info {
+    color: #8892b0;
+}
+
+.modal-description {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.modal-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-tech-tag {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.modal-features {
+    margin-bottom: 1.5rem;
+}
+
+.modal-features h4 {
+    color: #ccd6f6;
+    margin-bottom: 0.5rem;
+}
+
+.modal-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-features li {
+    margin-bottom: 0.25rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.modal-features li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #64ffda;
+}
+
+.modal-gallery {
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+}
+
+.modal-gallery h4 {
+    color: #ccd6f6;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item {
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 768px) {
+    .modal-body {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
 /* Footer */
 footer {
     background: #0f0f23;
@@ -1122,6 +1243,7 @@ footer {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1133,6 +1255,7 @@ footer {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1140,9 +1263,12 @@ footer {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-20px);
     }
@@ -1185,16 +1311,19 @@ footer {
     }
 
     .hero-visual {
-        order: -1; /* Move visual above text on mobile */
+        order: -1;
+        /* Move visual above text on mobile */
         margin-bottom: 2rem;
     }
 
     .floating-code {
-        position: relative; /* Change from absolute to relative on mobile */
+        position: relative;
+        /* Change from absolute to relative on mobile */
         width: 250px;
         height: 250px;
         margin: 0 auto;
-        transform: none !important; /* Override any transform from JS */
+        transform: none !important;
+        /* Override any transform from JS */
     }
 
     .about-content {
@@ -1223,10 +1352,10 @@ footer {
     }
 }
 
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
+.contact-info {
+    flex-direction: column;
+    align-items: center;
+}
 
 
 @media (max-width: 480px) {
