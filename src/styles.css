@@ -499,7 +499,6 @@ footer {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -511,7 +510,6 @@ footer {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -519,12 +517,9 @@ footer {
 }
 
 @keyframes float {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0px);
     }
-
     50% {
         transform: translateY(-20px);
     }
@@ -566,6 +561,19 @@ footer {
         font-size: 2.5rem;
     }
 
+    .hero-visual {
+        order: -1; /* Move visual above text on mobile */
+        margin-bottom: 2rem;
+    }
+
+    .floating-code {
+        position: relative; /* Change from absolute to relative on mobile */
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        transform: none !important; /* Override any transform from JS */
+    }
+
     .about-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -591,11 +599,22 @@ footer {
     }
 
     .floating-code {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        margin: 0 auto 2rem auto;
     }
 
     .code-icon {
-        font-size: 5rem;
+        font-size: 4rem;
+    }
+
+    .hero-visual {
+        margin-bottom: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
