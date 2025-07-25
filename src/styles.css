@@ -282,7 +282,7 @@ nav.scrolled {
     border-radius: 3px;
 }
 
-.mobile-frame::after {
+/* .mobile-frame::after {
     content: '';
     position: absolute;
     bottom: 8px;
@@ -292,7 +292,7 @@ nav.scrolled {
     height: 40px;
     border: 2px solid #333;
     border-radius: 50%;
-}
+} */
 
 .mobile-screen {
     width: 100%;
@@ -301,6 +301,14 @@ nav.scrolled {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+}
+
+.mobile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  display: block;
 }
 
 .mock-app {
@@ -1194,7 +1202,7 @@ nav.scrolled {
 
 .gallery-item {
     position: relative;
-    aspect-ratio: 16/9;
+    aspect-ratio: 8/16;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
